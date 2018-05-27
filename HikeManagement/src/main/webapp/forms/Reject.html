@@ -1,0 +1,40 @@
+<form role="form" name="form">
+  <script cam-script type="text/form-script">
+    camForm.on('form-loaded', function() {
+      camForm.variableManager.fetchVariable('Name');
+      camForm.variableManager.fetchVariable('Age');
+      camForm.variableManager.fetchVariable('Gender');
+      camForm.variableManager.fetchVariable('Time');
+    }); 
+    camForm.on('variables-restored', function() {
+      $scope.Name = camForm.variableManager.variableValue('Id');
+      $scope.Age = camForm.variableManager.variableValue('Name');
+      $scope.Gender = camForm.variableManager.variableValue('Mobile');
+      $scope.Time = camForm.variableManager.variableValue('Email');
+      console.log("setting variables to scope");
+          });
+  </script>
+  <h2>HikeManagement</h2>
+  
+  <table>
+
+    <tr>
+      <td>Id:</td>
+      <td>{{ Id }}</td>
+    </tr>
+
+    <tr>
+      <td>Name</td>
+      <td>{{Name}}</td>
+    </tr>
+
+    <tr>
+      <td>Mobile</td>
+      <td>{{Mobile}}</td>
+    </tr>
+
+	<tr>
+      <td>Email</td>
+      <td>{{Email}}</td>
+    </tr>
+    </table>

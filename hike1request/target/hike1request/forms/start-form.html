@@ -1,0 +1,31 @@
+<strong>Here you would put the actual form to start the process</strong>
+
+<p>
+  You can use this form through Camunda Tasklist
+  by setting the formKey of a BPMN Start Event to:
+  <code>embedded:app:forms/start-form.html</code>
+</p>
+<!--  <h3>hike1 request</h3>
+<form action="checkforexperiance">
+Employee Name:
+		<input type='text' name='employeeName'> <br><br>
+JobTitle:
+		<input type='text' name='jobtitle'><br><br>
+Experience:	
+		<input type='text' name='experience'><br>
+<input type='submit' value ='submit'>
+	
+</form>
+-->
+ <form name="requestJob" action="task-form.html">
+  <div class="form-group">
+    <label for="employeeName">employee Name</label>
+    <input class="form-control" cam-variable-type="String" cam-variable-name="employeeName"/>
+  </div>
+  <div class="form-group">
+    <label for="job">JobTitle</label>
+    <input class="form-control" cam-variable-type="String" cam-variable-name="job" />
+  </div>
+  
+ 
+</form>
